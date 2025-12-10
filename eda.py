@@ -25,3 +25,14 @@ print(df.isna().sum())
 
 print("\n===== Statistical Summary =====")
 print(df.describe())
+
+# AQI TREND OVER TIME
+
+
+plt.figure(figsize=(12,4))
+plt.plot(df["Datetime"], df["AQI"], color="red", linewidth=0.7)
+plt.title("AQI Trend Over Time")
+plt.xlabel("Date")
+plt.ylabel("AQI")
+plt.grid(alpha=0.3)
+plt.show()
