@@ -24,3 +24,12 @@ le_station = LabelEncoder()
 
 df["City_encoded"] = le_city.fit_transform(df["City"])
 df["Station_encoded"] = le_station.fit_transform(df["Station"])
+
+# SELECT FEATURES
+feature_cols = [
+    "PM2.5", "PM10", "NO2", "SO2", "CO", "O3",
+    "City_encoded", "Station_encoded"
+]
+
+X = df[feature_cols]
+y = df["AQI"]     # Target column
