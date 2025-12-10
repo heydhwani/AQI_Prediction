@@ -68,3 +68,26 @@ plt.figure(figsize=(10,6))
 sns.heatmap(df[num_cols].corr(), annot=True, cmap="coolwarm")
 plt.title("Correlation Heatmap")
 plt.show()
+
+
+# HOURLY PATTERN
+
+
+df["hour"] = df["Datetime"].dt.hour
+
+plt.figure(figsize=(10,4))
+df.groupby("hour")["PM2.5"].mean().plot()
+plt.title("Average PM2.5 by Hour of Day")
+plt.xlabel("Hour")
+plt.ylabel("PM2.5")
+plt.grid(alpha=0.3)
+plt.show()
+
+# STATION-WISE AVERAGE PM2.5
+
+
+plt.figure(figsize=(12,5))
+df.groupby("Station")["PM2.5"].mean().sort_values().plot(kind="bar")
+plt.title("Average PM2.5 by Station")
+plt.ylabel("PM2.5")
+plt.show()
