@@ -47,3 +47,14 @@ plt.xlabel("PM2.5")
 plt.ylabel("Count")
 plt.grid(alpha=0.3)
 plt.show()
+
+#  PM10 DISTRIBUTION
+
+
+plt.figure(figsize=(7,4))
+plt.hist(df["PM10"], bins=40, color="orange")
+plt.title("PM10 Distribution")
+plt.xlabel("PM10")
+plt.ylabel("Count")
+plt.grid(alpha=0.3)
+plt.show()
