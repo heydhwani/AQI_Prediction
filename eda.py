@@ -62,7 +62,7 @@ plt.show()
 # CORRELATION HEATMAP
 
 
-num_cols = ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3", "AQI"]
+num_cols = ["City","Datetime","Station","PM2.5","PM10","NO","NO2","NOx","NH3","CO","SO2","O3","Benzene","Toluene","Xylene","AQI"]
 
 plt.figure(figsize=(10,6))
 sns.heatmap(df[num_cols].corr(), annot=True, cmap="coolwarm")
