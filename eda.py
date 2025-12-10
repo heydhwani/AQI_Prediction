@@ -58,3 +58,13 @@ plt.xlabel("PM10")
 plt.ylabel("Count")
 plt.grid(alpha=0.3)
 plt.show()
+
+# CORRELATION HEATMAP
+
+
+num_cols = ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3", "AQI"]
+
+plt.figure(figsize=(10,6))
+sns.heatmap(df[num_cols].corr(), annot=True, cmap="coolwarm")
+plt.title("Correlation Heatmap")
+plt.show()
