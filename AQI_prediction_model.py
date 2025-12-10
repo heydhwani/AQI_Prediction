@@ -16,3 +16,11 @@ if "AQI_Bucket" in df.columns:
 
 # Convert Datetime to datetime type
 df["Datetime"] = pd.to_datetime(df["Datetime"])
+
+# LABEL ENCODING (City, Station)
+
+le_city = LabelEncoder()
+le_station = LabelEncoder()
+
+df["City_encoded"] = le_city.fit_transform(df["City"])
+df["Station_encoded"] = le_station.fit_transform(df["Station"])
