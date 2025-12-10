@@ -12,5 +12,7 @@ df = pd.read_csv(r'D:\Projects\AQI_Prediction\Dataset\station_hour.csv')
 df = df.drop(columns=['AQI_Bucket'])
 
 df['Datetime'] = pd.to_datetime(df['Datetime'])
+df = df.sort_values('Datetime')
+
 
 
