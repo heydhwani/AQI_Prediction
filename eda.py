@@ -36,3 +36,14 @@ plt.xlabel("Date")
 plt.ylabel("AQI")
 plt.grid(alpha=0.3)
 plt.show()
+
+# PM2.5 DISTRIBUTION
+
+
+plt.figure(figsize=(7,4))
+plt.hist(df["PM2.5"], bins=40, color="skyblue")
+plt.title("PM2.5 Distribution")
+plt.xlabel("PM2.5")
+plt.ylabel("Count")
+plt.grid(alpha=0.3)
+plt.show()
